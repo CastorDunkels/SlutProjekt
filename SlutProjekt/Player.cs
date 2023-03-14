@@ -6,6 +6,6 @@ public class Player : Character
         name = chosenName;
     }
 
-    chosenName = Console.ReadLine();
+    //chosenName = Console.ReadLine();
 
 }
