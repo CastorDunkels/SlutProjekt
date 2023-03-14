@@ -1,10 +1,24 @@
-public class Attack
+public class Attack : Moves
 {
-    protected int dmg;
 
-    protected int attack;
 
-    protected string name = "";
+    public void MediumAttack()
+    {
+        dmg = generator.Next(66,140);
+        attack = generator.Next(0,5);
+    }
 
-    protected Random generator = new Random();
+    public void LightAttack()
+    {
+        dmg = generator.Next(22,66);
+        attack = generator.Next(0,8);
+    }
+
+    public void StrongAttack()
+    {
+        dmg = generator.Next(140,350);
+        attack = generator.Next(0,3);        
+    }
+
+
 }
