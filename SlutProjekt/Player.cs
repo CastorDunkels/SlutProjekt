@@ -1,11 +1,9 @@
 public class Player : Character
 {
-    private string chosenName = "";
+    private string playerName = "";
     public Player()
     {
-        name = chosenName;
+        
     }
-
-    //chosenName = Console.ReadLine();
 
 }
