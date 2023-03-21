@@ -1,13 +1,10 @@
 public class Dodge : Moves
 {
-    public Dodge()
-    {
-        name = "Dodge";
-
-    }
     public void Avoid()
     {
-        speed = generator.Next(7,12);
+        name = "dodge";
+        speed = generator.Next(6,12);
+        
     }
 
 }
