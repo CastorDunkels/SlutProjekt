@@ -8,6 +8,8 @@ public class Moves
 
     protected int attack;
 
+    protected int strength;
+
     protected string name = "";
 
 }

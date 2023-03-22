@@ -2,42 +2,28 @@ public class Attack : Moves
 {
 
 
-    public void MediumAttack() //gör denna attack den enda attack metod om jag kan
+    public void Offensive() //Den här metoden ska kolla vilken strength det är och välja vilken attack det ska utföras, sen slumpar den några variablers värden
     {
-        name = "Medium Attack";
-        dmg = generator.Next(66,140);
-        attack = generator.Next(0,4);
-
-        /*
-        if(attack - speed > 0){
-
-            e.health -= dmg;
-            Raylib.DrawText($"You did {dmg} dmg.");
-
+        if(strength == 1)
+        {
+            name = "Light Attack";
+            dmg = generator.Next(25,100);
+            attack = generator.Next(0,9);
+        }
+        if(strength == 2)
+        {
+            name = "Medium Attack";
+            dmg = generator.Next(120,280);
+            attack = generator.Next(0,5);
         }
         else{
-            Console.WriteLine("Miss");
+            name = "Medium Attack";
+            dmg = generator.Next(500,1000);
+            attack = generator.Next(0,2);
+
         }
-        */
+
     }
-
-    /*public void LightAttack()
-    {
-        name = "Light Attack";
-        dmg = generator.Next(22,66);
-        attack = generator.Next(0,7);
-
-        //health -= dmg;
-    }
-
-    public void StrongAttack()
-    {
-        name = "Strong Attack";
-        dmg = generator.Next(140,350);
-        attack = generator.Next(0,2);     
-
-        //health -= dmg;
-    }*/
 
 
 }

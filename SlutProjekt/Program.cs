@@ -11,10 +11,12 @@
 int screenWidth = Raylib.GetScreenWidth();
 int screenHeight = Raylib.GetScreenHeight();
 
-Character character = new Character();
+Character character = new();
 
 Raylib.InitWindow(screenWidth, screenHeight, "Game");
 Raylib.SetTargetFPS(30);
+
+
 
 
 while (!Raylib.WindowShouldClose())
@@ -23,8 +25,8 @@ while (!Raylib.WindowShouldClose())
 
     Raylib.BeginDrawing();
     Raylib.ClearBackground(Color.GRAY);
-    
-    character.draw();
+    character.gudhs();
+
 
     Raylib.EndDrawing();
 }
