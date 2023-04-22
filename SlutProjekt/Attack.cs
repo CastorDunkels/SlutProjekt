@@ -10,14 +10,14 @@ public class Attack : Moves
             dmg = generator.Next(25,100);
             attack = generator.Next(0,9);
         }
-        if(strength == 2)
+        else if(strength == 2)
         {
             name = "Medium Attack";
             dmg = generator.Next(120,280);
             attack = generator.Next(0,5);
         }
         else{
-            name = "Medium Attack";
+            name = "Heavy Attack";
             dmg = generator.Next(500,1000);
             attack = generator.Next(0,2);
 

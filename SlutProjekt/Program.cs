@@ -1,17 +1,15 @@
 ﻿global using Raylib_cs;
 // Turn-based spel, swords and sandals/sonny likt 
-// Alla gubbar har en "health" variabel och om den blir 0 så dör den gubben
-// Alla gubbar har en "attack", "damage" och "speed" variabel
-// Om "attack" variabeln av en gubbe som utför en attack är större än "speed" variabeln av gubben som blir attackerad så går den igenom 
-// Om "speed" variabeln var högre så kommer attacken att missa vilket gör att gubben 
-// Om attacken går igenom så förlorar den attackerade gubben lika mycket av sin "health" variabel som fiendens "damage" variabel
-// Alla dessa variablar förutom "health" kommer att bli slumpade mellan rundor 
-// Det kommer bli slumpade mellan olika stora tal beroende på val av drag
+// Alla gubbar har en "health", "attack", "damage" och "speed" variabel
+// Om "attack" variabeln av en gubbe som utför en attack är större än "speed" variabeln av gubben som blir attackerad  vilket sänker "health" med "damage"
+// Om "speed" variabeln var högre så kommer attacken att missa 
+// Alla dessa variablar förutom "health" kommer att bli slumpade beroende på vilken attack de utför
 
-int screenWidth = Raylib.GetScreenWidth();
-int screenHeight = Raylib.GetScreenHeight();
+int screenWidth = 1000;
+int screenHeight = 1000;
 
-Character character = new();
+Player p1 = new();
+Enemy e1 = new();
 
 Raylib.InitWindow(screenWidth, screenHeight, "Game");
 Raylib.SetTargetFPS(30);
@@ -21,12 +19,12 @@ Raylib.SetTargetFPS(30);
 
 while (!Raylib.WindowShouldClose())
 {
-
+    p1.Update();
 
     Raylib.BeginDrawing();
-    Raylib.ClearBackground(Color.GRAY);
-    character.gudhs();
-
+    Raylib.ClearBackground(Color.WHITE);
+    p1.Draw();
+    e1.Draw();
 
     Raylib.EndDrawing();
 }

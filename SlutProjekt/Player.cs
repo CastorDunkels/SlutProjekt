@@ -1,9 +1,23 @@
+using System.Numerics;
 public class Player : Character
 {
 
-    public void TakeDamage()//denna metod ska ta information från både Dodge och Attack klasserna och räkna ut om attacken träffar eller inte 
+
+    public Player()
     {
+        rect = new Rectangle(200, 400, 50, 100);
+        color = Color.GREEN;
+        index = rnd.Next(names.Count);
+        name = names[index];
+        
+    }
+
+    public override void Draw()
+    {
+        base.Draw();
+
 
     }
+
 
 }

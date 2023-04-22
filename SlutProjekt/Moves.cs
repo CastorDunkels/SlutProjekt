@@ -12,4 +12,12 @@ public class Moves
 
     protected string name = "";
 
+    protected void RoundEnd()
+    {
+        dmg = 0;
+        speed = 0;
+        attack = 0;
+        strength = 0;
+    }
+
 }
