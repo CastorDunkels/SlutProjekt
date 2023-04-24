@@ -1,43 +1,62 @@
 public class Menu
 {
-   private List<Button> buttons;
-   private List<Color> colors;
-   private Character owner;
-
-    public Menu(List<Color> colors, Character owner)
+    private List<Button> buttons;
+    private List<Color> colors;
+    private Character owner;
+    private bool menuShown;
+    public Menu(int x, int y, List<Color> colors, Character owner)
     {
         this.colors = colors;
         this.owner = owner;
         buttons = new List<Button>();
         for (int i = 0; i < colors.Count(); i++)
         {
-            buttons.Add(new Button(50, 50 + 20 * i, colors[i], this));
+            buttons.Add(new Button(x, y + 40 * i, colors[i]));
         } 
     }
     public void Update()
     {
-        for (int i = 0; i < buttons.Count(); i++)
+        if(menuShown)
         {
-           buttons[i].Update();
+            int counter = 0;
+
+            for (int i = 0; i < buttons.Count(); i++)
+            {
+            buttons[i].Update();
+            }
+            for (int i = 0; i < buttons.Count(); i ++)
+            {
+                if(buttons[i].IsClicked())
+                {
+                    counter++;
+                    owner.MenuClicked(i);
+                }
+            }
+            if(counter == 0)
+            {
+                //SetVisible(false);
+            }
         }
+    }
+    public bool IsVisible()
+    {
+        return menuShown;
     }
 
     public void Draw()
     {
-        for (int i = 0; i < buttons.Count(); i++)
+        if (menuShown)
         {
-            buttons[i].Draw();
-        }        
-    }
-    public void ButtonClicked(Button b)
-    {
-        for(int i = 0; i < buttons.Count(); i++)
-        {
-            if(b == buttons [i])
+            for (int i = 0; i < buttons.Count(); i++)
             {
-                owner.MenuClicked(i);
-                
-            }
+                buttons[i].Draw();
+            }        
         }
     }
+
+    public void SetVisible(bool visible)
+    {
+        menuShown = visible;
+    }
+    
 }
