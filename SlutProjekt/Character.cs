@@ -5,8 +5,7 @@ public class Character
 
     protected Random rnd = new Random();
 
-    protected List<string> names = new List<string>() { "Bengt", "Björn", "Chris P Rat", "Pelle", "Sten", "Shrek" };
-
+    protected List<string> names;
     protected int index;
 
     public Rectangle rect;

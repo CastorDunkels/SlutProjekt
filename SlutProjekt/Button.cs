@@ -21,7 +21,7 @@ public class Button
     }
     public void Draw()
     {
-            Raylib.DrawCircle(x, y, radius, color);
+        Raylib.DrawCircle(x, y, radius, color);
         
     }
     public bool IsClicked()

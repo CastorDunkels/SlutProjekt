@@ -20,6 +20,7 @@ Raylib.SetTargetFPS(30);
 while (!Raylib.WindowShouldClose())
 {
     p1.Update();
+    e1.Update();
 
     Raylib.BeginDrawing();
     Raylib.ClearBackground(Color.WHITE);
