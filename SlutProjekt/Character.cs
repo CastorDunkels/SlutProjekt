@@ -6,6 +6,7 @@ public class Character
     protected Random rnd = new Random();
 
     protected List<string> names;
+
     protected int index;
 
     public Rectangle rect;
@@ -14,10 +15,10 @@ public class Character
 
     protected Color color;
 
-    public void TakeDamage()//denna metod ska ta information från både Dodge och Attack klasserna och räkna ut om attacken träffar eller inte 
+    /*public void TakeDamage()//denna metod ska ta information från både Dodge och Attack klasserna och räkna ut om attacken träffar eller inte 
     {
 
-    }
+    }*/
     public virtual void Update()
     {
        

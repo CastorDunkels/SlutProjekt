@@ -34,7 +34,7 @@ public class Enemy : Character
         menu.Draw();
     }
 
-        public override void MenuClicked(int x)
+    public override void MenuClicked(int x)
     {
         menu.SetVisible(false);
     }

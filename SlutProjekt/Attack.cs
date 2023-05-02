@@ -2,7 +2,7 @@ public class Attack : Moves
 {
 
 
-    public void Offensive() //Den här metoden ska kolla vilken strength det är och välja vilken attack det ska utföras, sen slumpar den några variablers värden
+    /*public void Offensive() //Den här metoden ska kolla vilken strength det är och välja vilken attack det ska utföras, sen slumpar den några variablers värden
     {
         if(strength == 1)
         {
@@ -23,7 +23,7 @@ public class Attack : Moves
 
         }
 
-    }
+    }*/
 
 
 }

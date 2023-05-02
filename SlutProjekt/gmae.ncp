@@ -1,0 +1,116 @@
+<Project>
+  <Name>gmae</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Game</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Program</Name>
+        <Access>Internal</Access>
+        <Location left="447" top="10" />
+        <Size width="163" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int screenWidth</Member>
+        <Member type="Field">int screenHeight</Member>
+        <Member type="Field">Player p1</Member>
+        <Member type="Field">Enemy e1</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Character</Name>
+        <Access>Public</Access>
+        <Location left="125" top="263" />
+        <Size width="163" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Rectangle rect</Member>
+        <Member type="Field">protected int health</Member>
+        <Member type="Field">protected int index</Member>
+        <Member type="Field">protected List&lt;string&gt; names</Member>
+        <Member type="Field">protected Random rnd</Member>
+        <Member type="Field">protected string name</Member>
+        <Member type="Field">protected Color color</Member>
+        <Member type="Method">public virtual void Update()</Member>
+        <Member type="Method">public virtual void Draw()</Member>
+        <Member type="Method">public virtual void MenuClicked(int x)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Enemy</Name>
+        <Access>Public</Access>
+        <Location left="216" top="584" />
+        <Size width="163" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Menu menu</Member>
+        <Member type="Constructor">public Enemy()</Member>
+        <Member type="Method">public override void Update()</Member>
+        <Member type="Method">public override void Draw()</Member>
+        <Member type="Method">public override void MenuClicked()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="38" top="584" />
+        <Size width="163" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Menu menu</Member>
+        <Member type="Constructor">public Player()</Member>
+        <Member type="Method">public override void Update()</Member>
+        <Member type="Method">public override void Draw()</Member>
+        <Member type="Method">public override void MenuClicked()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Button</Name>
+        <Access>Public</Access>
+        <Location left="758" top="263" />
+        <Size width="189" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int x</Member>
+        <Member type="Field">private int y</Member>
+        <Member type="Field">private float radius</Member>
+        <Member type="Field">private Color color</Member>
+        <Member type="Constructor">public Button(int x, int y, Color color)</Member>
+        <Member type="Method">public void Update()</Member>
+        <Member type="Method">public void Draw()</Member>
+        <Member type="Method">public bool IsClicked()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Menu</Name>
+        <Access>Public</Access>
+        <Location left="367" top="263" />
+        <Size width="311" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private List&lt;Color&gt; colors</Member>
+        <Member type="Field">private List&lt;Button&gt; buttons</Member>
+        <Member type="Field">private Character owner</Member>
+        <Member type="Field">private bool menuShown</Member>
+        <Member type="Constructor">public Menu(int x, int y, List&lt;Color&gt; colors, Character owner)</Member>
+        <Member type="Method">public void Update()</Member>
+        <Member type="Method">public bool IsVisible()</Member>
+        <Member type="Method">public void Draw()</Member>
+        <Member type="Method">public void SetVisible(bool visible)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="3" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
