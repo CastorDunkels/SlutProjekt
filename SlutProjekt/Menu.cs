@@ -9,17 +9,15 @@ public class Menu
         this.colors = colors;
         this.owner = owner;
         buttons = new List<Button>();
-        for (int i = 0; i < colors.Count(); i++)
+        for (int i = 0; i < colors.Count(); i++) //en for loop som skapar lika många buttons som det finns färger
         {
             buttons.Add(new Button(x, y + 40 * i, colors[i]));
         } 
     }
-    public void Update()
+    public void Update() //en metod som säger vad som ska hända om menuShown är sant
     {
         if(menuShown)
         {
-            int counter = 0;
-
             for (int i = 0; i < buttons.Count(); i++)
             {
             buttons[i].Update();
@@ -28,22 +26,17 @@ public class Menu
             {
                 if(buttons[i].IsClicked())
                 {
-                    counter++;
                     owner.MenuClicked(i);
                 }
             }
-            if(counter == 0)
-            {
-                //SetVisible(false);
-            }
         }
     }
-    public bool IsVisible()
+    public bool IsVisible() //en metod som säger om menuShown är sant
     {
         return menuShown;
     }
 
-    public void Draw()
+    public void Draw() //en metod som ritar ut menyn om menuShown är sant
     {
         if (menuShown)
         {
@@ -54,7 +47,7 @@ public class Menu
         }
     }
 
-    public void SetVisible(bool visible)
+    public void SetVisible(bool visible) //en metod som sätter menuShown till sant eller falskt 
     {
         menuShown = visible;
     }

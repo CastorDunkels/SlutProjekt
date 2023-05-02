@@ -19,19 +19,19 @@ public class Character
     {
 
     }*/
-    public virtual void Update()
+    public virtual void Update() //skapar en metod som inte gör något men kan bli överskriven med mer information i klasser som ärver från denna
     {
        
 
     }
 
-    public virtual void Draw()
+    public virtual void Draw() //skapar en metod som har information men kan bli överskriven av andra klasser som ärver från denna
     {
         Raylib.DrawText(name, (int)rect.x, (int)rect.y - 50, 30, color);
         Raylib.DrawRectangleRec(rect, color);
     }
 
-    public virtual void MenuClicked(int x)
+    public virtual void MenuClicked(int x) //metod som kan överskrivas
     {
     }
 

@@ -8,11 +8,11 @@ public class Enemy : Character
         names = new List<string>(){"Babu","Frikk","Gargamell","Limpa","Åsna","Donkey","Sven"};
         rect = new Rectangle(800, 400, 50, 100);
         color = Color.RED;
-        index = rnd.Next(names.Count);
-        name = names[index];
-        menu = new Menu((int)rect.x - 50, (int)rect.y, new List<Color>() {Color.BLACK, Color.RED, Color.ORANGE}, this);
+        index = rnd.Next(names.Count); 
+        name = names[index]; //ändrar name till ett slumpvist värde för names 
+        menu = new Menu((int)rect.x - 50, (int)rect.y, new List<Color>() {Color.BLACK, Color.RED, Color.ORANGE}, this); //skapar menyn för enemy
     }
-    public override void Update()
+    public override void Update() //en metod som körs varje frame och har blivit överskriven med ny information om vad den ska göra 
     {
         menu.Update();
         if (Raylib.CheckCollisionPointRec(Raylib.GetMousePosition(), rect) && Raylib.IsMouseButtonPressed(0))
@@ -28,13 +28,13 @@ public class Enemy : Character
         }
     }
 
-    public override void Draw()
+    public override void Draw() //metod med ny information om vad som ska ritas ut
     {
         base.Draw();
         menu.Draw();
     }
 
-    public override void MenuClicked(int x)
+    public override void MenuClicked(int x) //metod med ny information som kollar om menyn har blivit klickad
     {
         menu.SetVisible(false);
     }

@@ -19,12 +19,12 @@ public class Button
     public void Update()
     {
     }
-    public void Draw()
+    public void Draw() //metod som säger hur button ska se ut
     {
         Raylib.DrawCircle(x, y, radius, color);
         
     }
-    public bool IsClicked()
+    public bool IsClicked() //metod som kollar om button har blivit klickad på
     {
         if (Raylib.CheckCollisionPointCircle(Raylib.GetMousePosition(), new Vector2(x, y), radius) && Raylib.IsMouseButtonPressed(0))
         {
